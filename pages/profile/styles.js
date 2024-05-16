@@ -1,0 +1,90 @@
+import { StyleSheet } from "react-native";
+
+export const styles = StyleSheet.create({
+  container: {
+    position: "relative",
+    backgroundColor: "#100D28",
+    paddingTop: 12,
+    paddingBottom: 70,
+    minHeight: "100%",
+  },
+  imageContainer: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    padding: 12,
+  },
+  image: {
+    width: 100,
+    height: 100,
+    borderRadius: 50,
+    marginBottom: 12,
+    borderColor: "#fff3",
+    borderWidth: 1,
+    objectFit: "contain",
+  },
+  profileInfo: {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    marginBottom: 24,
+  },
+  profileInfoName: {
+    color: "#fff",
+    fontSize: 24,
+    marginBottom: 6,
+    fontWeight: "bold",
+  },
+  profileInfoAddress: {
+    color: "#fff",
+    fontSize: 16,
+  },
+  blueContainer: {
+    backgroundColor: "#1C1A41",
+    display: "flex",
+    width: "80%",
+    flexDirection: "row",
+    justifyContent: "space-around",
+    margin: 8,
+    borderRadius: 12,
+    padding: 20,
+  },
+  buy: {
+    borderColor: "#fff3",
+    borderRightWidth: 3,
+    paddingRight: 32,
+  },
+  title: {
+    color: "#fff",
+    fontSize: 20,
+    fontWeight: "bold",
+    textAlign: "center",
+  },
+  value: {
+    color: "#fff",
+    fontSize: 16,
+    textAlign: "center",
+  },
+  infoTitle: {
+    color: "#fff",
+    fontSize: 20,
+    fontWeight: "bold",
+    textAlign: "center",
+    marginTop: 24,
+  },
+  badgeInfo: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "flex-start",
+    width: 300,
+    backgroundColor: "#1C1A41",
+    gap: 12,
+    padding: 12,
+    borderRadius: 12,
+  },
+  text: {
+    color: "#fff",
+    fontSize: 16,
+  },
+});
