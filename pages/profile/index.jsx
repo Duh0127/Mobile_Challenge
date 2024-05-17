@@ -48,7 +48,6 @@ export default function Profile({ navigation }) {
     useFocusEffect(
         useCallback(() => {
             verifyAuthentication();
-            console.log('ACESSOU PERFIL');
         }, [navigation])
     );
 
@@ -65,8 +64,10 @@ export default function Profile({ navigation }) {
                     </View>
 
                     <View style={styles.profileInfo}>
-                        <TouchableOpacity onPressOut={logout}
-                            style={{ display: "flex", flexDirection: "row", gap: 12, justifyContent: "center", alignItems: "center", backgroundColor: "#f00", padding: 12, borderRadius: 12 }} onPress={() => navigation.navigate('EditProfile')}>
+                        <TouchableOpacity 
+                            onPress={logout}
+                            style={{ display: "flex", flexDirection: "row", gap: 12, justifyContent: "center", alignItems: "center", backgroundColor: "#f00", padding: 12, borderRadius: 12 }}
+                        >
                             <Text style={{ color: "#fff", fontSize: 18 }}>Deslogar</Text>
                             <FA6 name="arrow-right-from-bracket" size={18} color="#fff" />
                         </TouchableOpacity>
