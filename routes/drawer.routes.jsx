@@ -71,13 +71,10 @@ export default function DrawerRoutes() {
 
     const getUser = async () => {
         const user = await AsyncStorage.getItem('usuario');
-        console.log("[ USUARIO ] -> ", user);
         if (user) {
             const data = JSON.parse(user);
             setUser(data);
-        } else {
-            setUser();
-        }
+        } else setUser();
     }
 
     useEffect(() => {

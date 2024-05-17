@@ -66,10 +66,8 @@ export default function Register({ navigation }) {
         estadoCivil: values.estadoCivil,
         senha: values.senha,
       }
-      console.log(schema)
 
       const { data } = await apiUrl.post("/cliente", schema)
-      console.log("Cliente cadastrado -> ", data)
       ToastAndroid.show("Cliente cadastrado com sucesso!", ToastAndroid.SHORT);
       setUsuario({})
       reset()

@@ -1,10 +1,7 @@
-import React, { useState, useEffect } from "react";
-import { View, Text, Pressable, ToastAndroid, TouchableOpacity } from "react-native";
+import React, { useState } from "react";
+import { View, Text, ToastAndroid, TouchableOpacity } from "react-native";
 import { styles } from "./styles";
 import Input from "../../../components/Input";
-import FA6 from "react-native-vector-icons/FontAwesome6";
-import Categories from "../../../components/Categories";
-import axios from "axios";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import api from "../../../utils/api";
 
@@ -12,11 +9,8 @@ export default function Login({ navigation }) {
     const [usuario, setUsuario] = useState({ email: '', senha: '' });
 
     const onSubmit = async () => {
-        console.log("[ USUARIO ] -> ", usuario);
-
         try {
             const { data } = await api.post("/login", usuario);
-            console.log("[ LOGIN ] -> ", data);
             await AsyncStorage.setItem("token", data.token);
             await AsyncStorage.setItem("usuario", JSON.stringify(data.usuario));
             setUsuario({ email: '', senha: '' });
